@@ -19,20 +19,20 @@
     return view('welcome');
 });*/
 
-	
+
 /*Route::get('{n}', function($n) {
-	return 'Je suis la page ' . $n . ' !'; 
+	return 'Je suis la page ' . $n . ' !';
 })->where('n', '[1-3]');
 
 
-Route::get('article/{n}', function($n) { 
+Route::get('article/{n}', function($n) {
     return view('article')->with('numero', $n);
 })->where('n', '[1-9]');
 
 
 
-Route::get('facture/{n}', function($n) { 
-    return view('facture')->withNumero($n); 
+Route::get('facture/{n}', function($n) {
+    return view('facture')->withNumero($n);
 })->where('n', '[0-9]+');*/
 
 
@@ -46,4 +46,13 @@ Route::get('article/{n}', 'ArticleController@show')->where('n', '[0-9]+');
 Route::get('users', 'UsersController@getInfos');
 Route::post('users', 'UsersController@postInfos');
 
+
+
+Route::get('contact', 'ContactController@getForm');
+Route::post('contact', 'ContactController@postForm');
+
+
+
+Route::get('photo', 'PhotoController@getForm');
+Route::post('photo', 'PhotoController@postForm');
 //
